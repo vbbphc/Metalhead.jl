@@ -76,7 +76,6 @@ function densenet_layers()
     end
     ls[end - 1].W.data .= transpose(dropdims(weights["fc6_w_0"], dims = (1, 2))) # Dense Layers
     ls[end - 1].b.data .= weights["fc6_b_0"]
-    Flux.testmode!(ls)
     return ls
 end
 

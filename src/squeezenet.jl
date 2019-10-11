@@ -58,7 +58,6 @@ function squeezenet_layers()
             vec, softmax
             )
 #end
-  Flux.testmode!(ls)
   return ls
 end
 

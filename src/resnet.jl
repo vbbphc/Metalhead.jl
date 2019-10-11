@@ -81,7 +81,6 @@ function resnet_layers()
     count += 1
   end
   ls[21].W.data .= transpose(weights["gpu_0/pred_w_0"]); ls[21].b.data .= weights["gpu_0/pred_b_0"]
-  Flux.testmode!(ls)
   return ls
 end
 

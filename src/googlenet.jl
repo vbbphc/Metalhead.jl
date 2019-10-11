@@ -66,7 +66,6 @@ function googlenet_layers()
     ls[a].path_4[2].weight.data .= weights["inception_$b/pool_proj_w_0"][end:-1:1,:,:,:][:,end:-1:1,:,:]; ls[a].path_4[2].bias.data .= weights["inception_$b/pool_proj_b_0"]
   end
   ls[20].W.data .= transpose(weights["loss3/classifier_w_0"]); ls[20].b.data .= weights["loss3/classifier_b_0"]
-  Flux.testmode!(ls)
   return ls
 end
 
